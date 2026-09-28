@@ -13,8 +13,9 @@
 <header><div class="wrap nav">
   <a class="logo" href="#" aria-label="Maxwell Helps"><svg class="mk" viewBox="0 0 120 92" aria-hidden="true"><path fill="#083063" d="M14 4h22l24 25 24-25h22v44l-18 8V30L64 58h-8L32 30v33l-18 6z"/><path fill="#0ea0e8" d="M4 84c22-22 44-22 66-14s34 2 48-12c-12 20-30 30-50 24S26 72 4 84z"/><path fill="#0a72c0" d="M46 86c24 6 46 2 64-22-6 22-30 36-64 22z"/></svg><span class="wm">Maxwell<b>Helps</b></span></a>
   <nav><ul><li><a href="medicare-101.html">Medicare 101</a></li><li><a href="#pillars">Coverage</a></li><li><a href="#quiz">Find Your Plan</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-  <div class="navr"><a class="tel" href="tel:+17273513321">727-351-3321</a><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake</a></div>
-</div></header>
+  <div class="navr"><a class="tel" href="tel:+17273513321">727-351-3321</a><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake</a><button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div>
+</div>
+<div id="mnav" class="mnav" hidden><div class="wrap"><ul><li><a href="medicare-101.html">Medicare 101</a></li><li><a href="#pillars">Coverage</a></li><li><a href="#quiz">Find Your Plan</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li></ul><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake</a></div></div></header>
 
 <main>
 <section class="hero"><div class="blob b1"></div><div class="blob b2"></div><svg class="palm pa" viewBox="0 0 200 300" aria-hidden="true"><use href="#palm"/></svg><svg class="palm pb" viewBox="0 0 200 300" aria-hidden="true"><use href="#palm"/></svg>
@@ -102,9 +103,14 @@
   <p>We do not offer every plan available in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. Maxwell Kingsbury is a licensed independent insurance agent (Florida License # G365332, NPN 22312975) and is compensated by insurance carriers. Not connected with or endorsed by the U.S. government or the federal Medicare program.</p>
   <p>© 2026 Maxwell Kingsbury · Maxwell Helps</p>
 </div></footer>
+<div class="mbar"><a class="call" href="tel:+17273513321">Call Maxwell</a><a class="go" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake</a></div>
 
 <script>
 (function(){
+  var mb=document.querySelector('.menu-btn'),mn=document.getElementById('mnav');
+  function setM(o){mb.setAttribute('aria-expanded',o);mn.hidden=!o}
+  mb.onclick=function(){setM(mb.getAttribute('aria-expanded')!=='true')};
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setM(false)})});
   var steps=[].slice.call(document.querySelectorAll('.step')),i=0,pb=document.getElementById('pb');
   function go(n){steps[i].classList.remove('on');i=Math.max(0,Math.min(steps.length-1,n));steps[i].classList.add('on');pb.style.width=((i+1)/steps.length*100)+'%'}
   pb.style.width=(100/steps.length)+'%';
