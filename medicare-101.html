@@ -25,7 +25,8 @@
 .nums .card{text-align:center}.nums b{display:block;font:800 2rem Montserrat,system-ui,sans-serif;color:var(--brand-2)}
 .nums span{color:var(--muted);font-size:.92rem}
 .nums .card{min-width:0;padding:22px 14px}
-@media(max-width:940px){.nums{grid-template-columns:1fr 1fr}}@media(max-width:480px){.nums{grid-template-columns:1fr}}
+@media(max-width:940px){.nums{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero.sm{padding:36px 0 84px}.hero.sm h1{font-size:2.3rem}.nums{gap:12px;margin-top:24px}.nums b{font-size:1.5rem}.nums span{font-size:.85rem}.part{font-size:2rem}.paths,.tl{margin-top:26px;gap:14px}}
 .note{font-size:.85rem;color:var(--muted);margin-top:18px}
 .callout{margin-top:40px}
 .callout a.btn{background:#fff;color:var(--brand)}
@@ -38,8 +39,9 @@
 <header><div class="wrap nav">
   <a class="logo" href="index.html" aria-label="Maxwell Helps"><svg class="mk" viewBox="0 0 120 92" aria-hidden="true"><path fill="#083063" d="M14 4h22l24 25 24-25h22v44l-18 8V30L64 58h-8L32 30v33l-18 6z"/><path fill="#0ea0e8" d="M4 84c22-22 44-22 66-14s34 2 48-12c-12 20-30 30-50 24S26 72 4 84z"/><path fill="#0a72c0" d="M46 86c24 6 46 2 64-22-6 22-30 36-64 22z"/></svg><span class="wm">Maxwell<b>Helps</b></span></a>
   <nav><ul><li><a href="medicare-101.html" class="on">Medicare 101</a></li><li><a href="index.html#pillars">Coverage</a></li><li><a href="index.html#quiz">Find Your Plan</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
-  <div class="navr"><a class="tel" href="tel:+17273513321">727-351-3321</a><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake</a></div>
-</div></header>
+  <div class="navr"><a class="tel" href="tel:+17273513321">727-351-3321</a><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake</a><button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div>
+</div>
+<div id="mnav" class="mnav" hidden><div class="wrap"><ul><li><a href="medicare-101.html">Medicare 101</a></li><li><a href="index.html#pillars">Coverage</a></li><li><a href="index.html#quiz">Find Your Plan</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake</a></div></div></header>
 
 <main>
 <section class="hero sm"><div class="blob b1"></div><div class="blob b2"></div><svg class="palm pa" viewBox="0 0 200 300" aria-hidden="true"><use href="#palm"/></svg>
@@ -121,9 +123,14 @@
   <p>Educational information only, not medical, legal or tax advice. Official sources: <a href="https://www.medicare.gov/" target="_blank" rel="noopener">Medicare.gov</a> · <a href="https://www.ssa.gov/medicare/" target="_blank" rel="noopener">SSA.gov</a> · <a href="https://www.cms.gov/" target="_blank" rel="noopener">CMS.gov</a></p>
   <p>© 2026 Maxwell Kingsbury · Maxwell Helps</p>
 </div></footer>
+<div class="mbar"><a class="call" href="tel:+17273513321">Call Maxwell</a><a class="go" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake</a></div>
 
 <script>
 (function(){
+  var mb=document.querySelector('.menu-btn'),mn=document.getElementById('mnav');
+  function setM(o){mb.setAttribute('aria-expanded',o);mn.hidden=!o}
+  mb.onclick=function(){setM(mb.getAttribute('aria-expanded')!=='true')};
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setM(false)})});
   var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 })();
