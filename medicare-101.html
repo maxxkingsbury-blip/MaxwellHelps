@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Medicare 101 — A Plain-English Guide | Maxwell Helps</title>
+<title>Medicare 101: A Plain-English Guide | Maxwell Helps</title>
 <meta name="description" content="Medicare 101: the four parts of Medicare, your two coverage paths, key enrollment dates and 2026 costs, explained in plain English by Maxwell Helps.">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -16,14 +16,20 @@
 .paths ul{margin:0;padding-left:20px;color:var(--muted)}.paths li{margin-bottom:6px}
 .paths .card h3 small{display:block;font:600 .8rem Inter,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-2);margin-bottom:6px}
 @media(max-width:800px){.paths{grid-template-columns:1fr}.paths .or{justify-self:center}}
-.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:38px}
-.tl .card{border-top:5px solid var(--sky)}
-.tl b.when{display:block;font:700 1.05rem Montserrat,system-ui,sans-serif;color:var(--brand);margin-bottom:6px}
-@media(max-width:940px){.tl{grid-template-columns:1fr 1fr}}@media(max-width:560px){.tl{grid-template-columns:1fr}}
+.tl{margin-top:34px;max-width:960px;display:grid;gap:16px}
+.tl .row{display:grid;grid-template-columns:48px 260px 1fr;gap:22px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 26px;transition:transform .25s,box-shadow .25s}
+.tl .row:hover{transform:translateY(-4px);box-shadow:0 24px 44px -24px rgba(var(--shadow),.35)}
+.tl .ico{margin:0}
+.tl b.when{display:block;font:700 1.1rem Montserrat,system-ui,sans-serif;color:var(--brand)}
+.tl b.when span{display:block;font:600 .95rem Inter,system-ui,sans-serif;color:var(--brand-2);margin-top:4px}
+.tl p{margin:0;color:var(--muted)}
+@media(max-width:800px){.tl .row{grid-template-columns:48px 1fr;gap:6px 18px;padding:20px}.tl .row p{grid-column:2}}
 .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:34px}
-.nums .card{text-align:center}.nums b{display:block;font:800 2rem Montserrat,system-ui,sans-serif;color:var(--brand-2)}
+.nums .stat{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 24px;transition:transform .25s,box-shadow .25s}
+.nums .stat:hover{transform:translateY(-4px);box-shadow:0 24px 44px -24px rgba(var(--shadow),.35)}
+.nums b{margin-bottom:6px}.nums b{display:block;font:800 2rem Montserrat,system-ui,sans-serif;color:var(--brand-2)}
 .nums span{color:var(--muted);font-size:.92rem}
-.nums .card{min-width:0;padding:22px 14px}
+.nums .stat{min-width:0}
 @media(max-width:940px){.nums{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.nums{gap:12px;margin-top:24px}.nums b{font-size:1.5rem}.nums span{font-size:.85rem}.part{font-size:2rem}.paths,.tl{margin-top:26px;gap:14px}}
 .note{font-size:.85rem;color:var(--muted);margin-top:18px}
@@ -33,13 +39,13 @@
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to main content</a><svg width="0" height="0" style="position:absolute"><symbol id="palm" viewBox="0 0 200 300"><g fill="currentColor"><path d="M96 68C104 150 96 230 104 300L116 300C108 230 116 150 106 68Z"/><path d="M100 70C70 30 25 30 0 62C35 48 68 55 100 70Z"/><path d="M100 70C130 30 175 30 200 62C165 48 132 55 100 70Z"/><path d="M100 70C60 60 20 85 8 130C40 96 70 82 100 70Z"/><path d="M100 70C140 60 180 85 192 130C160 96 130 82 100 70Z"/><path d="M100 70C85 30 95 10 108 0C112 30 108 50 100 70Z"/><path d="M100 70C80 55 55 45 40 20C70 30 90 50 100 70Z"/><path d="M100 70C120 55 145 45 160 20C130 30 110 50 100 70Z"/></g></symbol></svg>
-<div class="banner">Medicare Annual Enrollment runs Oct 15 – Dec 7 · <a href="index.html#contact">Get local help →</a></div>
+<div class="banner">Medicare Annual Enrollment runs Oct 15 to Dec 7 · <a href="index.html#contact">Get local help</a></div>
 <header><div class="wrap nav">
   <a class="logo" href="index.html" aria-label="Maxwell Helps"><svg class="mk" viewBox="0 0 120 92" aria-hidden="true"><path fill="#083063" d="M14 4h22l24 25 24-25h22v44l-18 8V30L64 58h-8L32 30v33l-18 6z"/><path fill="#0ea0e8" d="M4 84c22-22 44-22 66-14s34 2 48-12c-12 20-30 30-50 24S26 72 4 84z"/><path fill="#0a72c0" d="M46 86c24 6 46 2 64-22-6 22-30 36-64 22z"/></svg><span class="wm">Maxwell<b>Helps</b></span></a>
   <nav aria-label="Main"><ul><li><a href="medicare-101.html" aria-current="page">Medicare 101</a></li><li><a href="index.html#pillars">Coverage</a></li><li><a href="index.html#quiz">Find Your Plan</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
-  <div class="navr"><a class="tel" href="tel:+17273513321">727-351-3321</a><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake form<span class="sr-only"> (opens in a new tab)</span></a><button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div>
+  <div class="navr"><a class="tel" href="tel:+17273513321">727-351-3321</a><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake form<span class="sr-only"> (opens in a new tab)</span></a><button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div>
 </div>
-<div id="mnav" class="mnav" hidden><div class="wrap"><ul><li><a href="medicare-101.html" aria-current="page">Medicare 101</a></li><li><a href="index.html#pillars">Coverage</a></li><li><a href="index.html#quiz">Find Your Plan</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake form<span class="sr-only"> (opens in a new tab)</span></a></div></div></header>
+<div id="mnav" class="mnav" hidden><div class="wrap"><ul><li><a href="medicare-101.html" aria-current="page">Medicare 101</a></li><li><a href="index.html#pillars">Coverage</a></li><li><a href="index.html#quiz">Find Your Plan</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake form<span class="sr-only"> (opens in a new tab)</span></a></div></div></header>
 
 <main id="main">
 <section class="hero sm"><div class="blob b1"></div><div class="blob b2"></div><svg class="palm pa" viewBox="0 0 200 300" aria-hidden="true"><use href="#palm"/></svg>
@@ -47,13 +53,13 @@
   <span class="eyebrow">Medicare 101</span>
   <h1>Medicare, <span>explained in plain English.</span></h1>
   <p class="lead">Turning 65 or new to Medicare? Start here. This guide covers the four parts of Medicare, the two main ways to build your coverage, the dates that matter, and what things cost in 2026.</p>
-  <div class="cta"><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake form<span class="sr-only"> (opens in a new tab)</span></a><a class="btn g" href="#parts">Read the guide</a></div>
+  <div class="cta"><a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake form<span class="sr-only"> (opens in a new tab)</span></a><a class="btn g" href="#parts">Read the guide</a></div>
 </div></div><svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C240 90 480 0 720 40S1200 80 1440 30V80H0Z"/></svg></section>
 
 <div class="tpmo"><div class="wrap">We do not offer every plan available in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.</div></div>
 
 <section id="parts"><div class="wrap">
-  <span class="eyebrow rv">The basics</span><h2 class="rv">The four parts of Medicare</h2>
+  <h2 class="rv">The four parts of Medicare</h2>
   <p class="rv" style="color:var(--muted);max-width:720px">Medicare is federal health insurance for people 65 and older, and for some younger people with certain disabilities or conditions. It is split into four lettered parts, each covering something different.</p>
   <div class="grid4">
     <div class="card rv"><div class="part" aria-hidden="true">A</div><h3>Part A: Hospital insurance</h3><p>Inpatient hospital stays, skilled nursing facility care, hospice and some home health care. Most people pay no premium if they or a spouse worked and paid Medicare taxes for about 10 years.</p></div>
@@ -64,7 +70,7 @@
 </div></section>
 
 <section id="paths" style="background:var(--soft)"><div class="wrap">
-  <span class="eyebrow rv">How the pieces fit</span><h2 class="rv">Two paths to your coverage</h2>
+  <h2 class="rv">Two paths to your coverage</h2>
   <p class="rv" style="color:var(--muted);max-width:720px">Everyone starts with Original Medicare (Parts A and B) from the federal government. From there, most people choose one of two paths. Neither is right for everyone. The best fit depends on your health, your doctors, your prescriptions, how much you travel and your budget.</p>
   <div class="paths">
     <div class="card rv"><h3><small>Path 1</small>Original Medicare + Medigap + Part D</h3><p>Keep Original Medicare, add a Medicare Supplement (Medigap) plan to help with costs Medicare doesn't pay, and add a standalone Part D drug plan.</p><ul><li>See any doctor nationwide who accepts Medicare</li><li>More predictable out-of-pocket costs</li><li>Usually a higher monthly premium</li></ul></div>
@@ -75,30 +81,30 @@
 </div></section>
 
 <section id="dates"><div class="wrap">
-  <span class="eyebrow rv">Timing matters</span><h2 class="rv">Key enrollment dates</h2>
+  <h2 class="rv">Key enrollment dates</h2>
   <p class="rv" style="color:var(--muted);max-width:720px">Enrolling on time is as important as choosing the right plan. Missing your window without other qualifying coverage can mean late-enrollment penalties that last as long as you have Medicare.</p>
   <div class="tl">
-    <div class="card rv"><b class="when">Initial Enrollment Period</b><p>A 7-month window around your 65th birthday: the 3 months before, your birthday month, and the 3 months after.</p></div>
-    <div class="card rv"><b class="when">Annual Enrollment · Oct 15 – Dec 7</b><p>Switch between Original Medicare and Medicare Advantage, change plans, or join, drop or switch Part D. Changes start January 1.</p></div>
-    <div class="card rv"><b class="when">MA Open Enrollment · Jan 1 – Mar 31</b><p>If you're in a Medicare Advantage plan, you can switch to another one, or return to Original Medicare and add Part D.</p></div>
-    <div class="card rv"><b class="when">Special Enrollment Periods</b><p>Certain life events, such as moving or losing employer coverage, can open a window to make changes outside the usual dates.</p></div>
+    <div class="row rv"><div class="ico" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 6a2 2 0 0 0 2-2c0-.38-.1-.73-.29-1.03L12 0l-1.71 2.97c-.19.3-.29.65-.29 1.03 0 1.1.9 2 2 2m6 3h-5V7h-2v2H6c-1.66 0-3 1.34-3 3v9c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-9c0-1.66-1.34-3-3-3m1 11H5v-3c.9 0 1.76-.37 2.4-1l1.1-1.08L9.56 16c1.31 1.3 3.59 1.29 4.89 0l1.08-1.08L16.6 16c.64.63 1.5 1 2.4 1zm0-4.5c-.5 0-1-.2-1.35-.57L15.5 12.8l-2.12 2.13c-.74.74-2.03.74-2.77 0L8.5 12.8l-2.16 2.13c-.34.36-.84.57-1.34.57V12c0-.55.45-1 1-1h12c.55 0 1 .45 1 1z"/></svg></div><b class="when">Initial Enrollment Period<span>Around your 65th birthday</span></b><p>A 7-month window: the 3 months before, your birthday month, and the 3 months after.</p></div>
+    <div class="row rv"><div class="ico" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18 11v1.5c3.19 0 5.09 3.55 3.33 6.21l-1.09-1.09C21.06 15.96 19.85 14 18 14v1.5l-2.25-2.25zm0 11v-1.5c-3.19 0-5.09-3.55-3.33-6.21l1.09 1.09C14.94 17.04 16.15 19 18 19v-1.5l2.25 2.25zm1-19h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a5.9 5.9 0 0 1-1.5-2H5V9h14v1.59c.71.11 1.39.35 2 .72V5a2 2 0 0 0-2-2m0 4H5V5h14"/></svg></div><b class="when">Annual Enrollment<span>Oct 15 to Dec 7</span></b><p>Switch between Original Medicare and Medicare Advantage, change plans, or join, drop or switch Part D. Changes start January 1.</p></div>
+    <div class="row rv"><div class="ico" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="m21 9-4-4v3h-7v2h7v3M7 11l-4 4 4 4v-3h7v-2H7z"/></svg></div><b class="when">Medicare Advantage Open Enrollment<span>Jan 1 to Mar 31</span></b><p>If you're in a Medicare Advantage plan, you can switch to another one, or return to Original Medicare and add Part D.</p></div>
+    <div class="row rv"><div class="ico" aria-hidden="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 3 1 9h2v6h4v-4h2v4h4V9h2zm3.5 6v4.5h-1v-4h-5v4h-1V8L8 5l3.5 3zM9 16v2h6v-2l3 3-3 3v-2H9v2l-3-3zm14-7h-2v6h-6v-5h4l-5.46-4.89L16 3z"/></svg></div><b class="when">Special Enrollment Periods<span>After certain life events</span></b><p>Moving or losing employer coverage, for example, can open a window to make changes outside the usual dates.</p></div>
   </div>
   <p class="note rv">Your Medigap open enrollment period is the 6 months starting the month you're 65 or older and enrolled in Part B. It's usually the easiest time to buy a Medigap plan.</p>
 </div></section>
 
 <section id="costs" style="background:var(--soft)"><div class="wrap">
-  <span class="eyebrow rv">What it costs</span><h2 class="rv">Key Medicare numbers for 2026</h2>
+  <h2 class="rv">Key Medicare numbers for 2026</h2>
   <div class="nums">
-    <div class="card rv"><b>$202.90</b><span>Standard Part B monthly premium</span></div>
-    <div class="card rv"><b>$283</b><span>Part B yearly deductible, then usually 20% coinsurance</span></div>
-    <div class="card rv"><b>$1,736</b><span>Part A deductible per hospital benefit period</span></div>
-    <div class="card rv"><b>$2,100</b><span>Part D yearly out-of-pocket cap for covered drugs</span></div>
+    <div class="stat rv"><b>$202.90</b><span>Standard Part B monthly premium</span></div>
+    <div class="stat rv"><b>$283</b><span>Part B yearly deductible, then usually 20% coinsurance</span></div>
+    <div class="stat rv"><b>$1,736</b><span>Part A deductible per hospital benefit period</span></div>
+    <div class="stat rv"><b>$2,100</b><span>Part D yearly out-of-pocket cap for covered drugs</span></div>
   </div>
   <p class="note rv">Figures are 2026 amounts set by the Centers for Medicare &amp; Medicaid Services. People with higher incomes pay more for Parts B and D. Original Medicare has no yearly out-of-pocket limit on its own, which is one reason many people add coverage. Verify current figures at <a href="https://www.medicare.gov/" target="_blank" rel="noopener">Medicare.gov<span class="sr-only"> (opens in a new tab)</span></a>.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
-  <div style="text-align:center"><span class="eyebrow">Getting started</span><h2>Common first questions</h2></div>
+  <div style="text-align:center"><h2>Common first questions</h2></div>
   <div class="faq">
     <details><summary>Is Medicare free?</summary><p>Not entirely. Part A is premium-free for most people, but Part B has a monthly premium, and Part D and Medicare Advantage premiums vary by plan. Even a $0-premium plan has copays and deductibles.</p></details>
     <details><summary>Is Medicare the same as Medicaid?</summary><p>No. Medicare is federal insurance based mainly on age or disability, regardless of income. Medicaid is a state and federal program for people with limited income and resources. Some people qualify for both.</p></details>
@@ -111,18 +117,19 @@
 <section id="contact" style="padding-top:0"><div class="wrap"><div class="final rv"><svg class="palm pc" viewBox="0 0 200 300" aria-hidden="true"><use href="#palm"/></svg><svg class="palm pd" viewBox="0 0 200 300" aria-hidden="true"><use href="#palm"/></svg>
   <div class="ph-sm" style="margin:0 auto 18px"><div class="ph" role="img" aria-label="Maxwell Kingsbury, insurance advisor"></div></div>
   <h2>Still have questions?</h2><p>Maxwell can walk you through your options one-on-one, in plain English, with no pressure.</p>
-  <a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start your intake form<span class="sr-only"> (opens in a new tab)</span></a> <a class="btn g" style="color:var(--brand);border-color:var(--brand)" href="tel:+17273513321">727-351-3321</a><p style="font-size:.85rem;margin:22px auto 0">Hours: 10am–8pm Eastern. The intake form is hosted by HealthSherpa, a third-party enrollment platform. By submitting it, you are sharing your information with Maxwell Kingsbury, a licensed insurance agent, who may contact you about Medicare plan options. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  <a class="btn p" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake form<span class="sr-only"> (opens in a new tab)</span></a> <a class="btn g" style="color:var(--brand);border-color:var(--brand)" href="tel:+17273513321">Call Maxwell</a><p style="font-size:.85rem;margin:22px auto 0">727-351-3321, 10am-8pm Eastern. The intake form is hosted by HealthSherpa, a third-party enrollment platform. By submitting it, you are sharing your information with Maxwell Kingsbury, a licensed insurance agent, who may contact you about Medicare plan options. See the <a href="privacy.html">Privacy Policy</a>.</p>
 </div></div></section>
 </main>
 
 <footer><div class="wrap">
-  <div class="row"><a class="logo" href="index.html" aria-label="Maxwell Helps"><svg class="mk" viewBox="0 0 120 92" aria-hidden="true"><path fill="#083063" d="M14 4h22l24 25 24-25h22v44l-18 8V30L64 58h-8L32 30v33l-18 6z"/><path fill="#0ea0e8" d="M4 84c22-22 44-22 66-14s34 2 48-12c-12 20-30 30-50 24S26 72 4 84z"/><path fill="#0a72c0" d="M46 86c24 6 46 2 64-22-6 22-30 36-64 22z"/></svg><span class="wm">Maxwell<b>Helps</b></span></a><div>727-351-3321 · <a href="mailto:Max@MaxwellHelps.com">Max@MaxwellHelps.com</a><br>Florida License # G365332 · NPN 22312975<br>Hours: 10am–8pm Eastern</div></div>
+  <div class="row"><a class="logo" href="index.html" aria-label="Maxwell Helps"><svg class="mk" viewBox="0 0 120 92" aria-hidden="true"><path fill="#083063" d="M14 4h22l24 25 24-25h22v44l-18 8V30L64 58h-8L32 30v33l-18 6z"/><path fill="#0ea0e8" d="M4 84c22-22 44-22 66-14s34 2 48-12c-12 20-30 30-50 24S26 72 4 84z"/><path fill="#0a72c0" d="M46 86c24 6 46 2 64-22-6 22-30 36-64 22z"/></svg><span class="wm">Maxwell<b>Helps</b></span></a><div>727-351-3321 · <a href="mailto:Max@MaxwellHelps.com">Max@MaxwellHelps.com</a><br>Florida License # G365332 · NPN 22312975<br>Hours: 10am-8pm Eastern</div></div>
   <p>We do not offer every plan available in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. Maxwell Kingsbury is a licensed independent insurance agent (Florida License # G365332, NPN 22312975) and is compensated by insurance carriers. Not connected with or endorsed by the U.S. government or the federal Medicare program.</p>
-  <p>Educational information only, not medical, legal or tax advice. Official sources: <a href="https://www.medicare.gov/" target="_blank" rel="noopener">Medicare.gov<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.ssa.gov/medicare/" target="_blank" rel="noopener">SSA.gov<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.cms.gov/" target="_blank" rel="noopener">CMS.gov<span class="sr-only"> (opens in a new tab)</span></a></p>
-  <p class="legal-links"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="terms.html#refunds">Refund Policy</a> · <a href="cookies.html">Cookie Policy</a> · <a href="terms.html#accessibility">Accessibility</a></p>
+  <p>Educational information only, not medical, legal or tax advice.</p>
+  <p class="src-links">Official sources: <a href="https://www.medicare.gov/" target="_blank" rel="noopener">Medicare.gov<span class="sr-only"> (opens in a new tab)</span></a><a href="https://www.ssa.gov/medicare/" target="_blank" rel="noopener">SSA.gov<span class="sr-only"> (opens in a new tab)</span></a><a href="https://www.cms.gov/" target="_blank" rel="noopener">CMS.gov<span class="sr-only"> (opens in a new tab)</span></a></p>
+  <p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="terms.html#refunds">Refund Policy</a><a href="cookies.html">Cookie Policy</a><a href="terms.html#accessibility">Accessibility</a></p>
   <p>© 2026 Maxwell Kingsbury · Maxwell Helps</p>
 </div></footer>
-<div class="mbar"><a class="call" href="tel:+17273513321">Call Maxwell</a><a class="go" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Intake form<span class="sr-only"> (opens in a new tab)</span></a></div>
+<div class="mbar"><a class="call" href="tel:+17273513321">Call Maxwell</a><a class="go" href="https://medicare.healthsherpa.com/intake/maxwell-kingsbury" target="_blank" rel="noopener">Start intake form<span class="sr-only"> (opens in a new tab)</span></a></div>
 
 <script>
 (function(){
