@@ -119,6 +119,10 @@
   pb.style.width=(100/n)+'%';
   document.querySelectorAll('[data-back]').forEach(function(b){b.onclick=function(){go(i-1)}});
   document.querySelectorAll('[data-pick]').forEach(function(b){b.onclick=function(){b.parentNode.querySelectorAll('.opt').forEach(function(o){o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');setTimeout(function(){go(i+1)},250)}});
+  var spyIds=['pillars','quiz','services','about','faq','contact'],spyLinks=document.querySelectorAll('header a[href^="#"]');
+  function spy(){var y=window.scrollY+140,cur=null;spyIds.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id});
+    spyLinks.forEach(function(a){if(a.getAttribute('href')==='#'+cur)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}
+  var spyT;window.addEventListener('scroll',function(){if(!spyT)spyT=requestAnimationFrame(function(){spyT=null;spy()})},{passive:true});spy();
   var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 })();
