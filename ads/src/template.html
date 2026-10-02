@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{font-family:'Poppins',sans-serif;position:relative;color:#0B1D33;background:#F3FAFD}
+.k{display:inline-block;font-weight:600;font-size:24px;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border-radius:999px;border:3px solid currentColor}
+.h{font-weight:700;line-height:1.08;letter-spacing:-.015em}
+.hi{color:#0EA0E8}
+.sub{font-weight:500;font-size:32px;line-height:1.3}
+.cta{display:inline-flex;align-items:center;gap:16px;font-weight:700;font-size:36px;padding:24px 40px;border-radius:999px}
+.cta svg{width:30px;height:30px}
+.name{font-weight:700;font-size:34px;line-height:1.15}
+.lic{font-weight:500;font-size:22px;line-height:1.35}
+.disc{font-size:18px;line-height:1.35}
+.brand{font-weight:700;font-size:26px;white-space:nowrap}.brand span{font-weight:500}
+/* A: navy, photo right */
+.A{background:#083063;color:#FAFDFF}
+.A .photo{position:absolute;right:0;top:0;width:500px;height:1080px;background:url(../../maxwell-kingsbury.jpg) 45% 18%/cover}
+.A .photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#083063 0%,rgba(8,48,99,.55) 22%,rgba(8,48,99,0) 45%)}
+.A .wrap{position:absolute;left:72px;top:72px;width:560px;bottom:150px;display:flex;flex-direction:column;justify-content:space-between}
+.A .cta{background:#FAFDFF;color:#083063}
+.A .lic,.A .disc{color:#BFD9EA}
+.A .tag{position:absolute;left:0;right:0;bottom:0;height:120px;background:rgba(3,25,56,.92);padding:22px 72px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.A .brand span{color:#0EA0E8}
+/* B: light, headline top, photo card bottom */
+.B .wrap{position:absolute;left:72px;right:72px;top:72px}
+.B .k{color:#0369A1}
+.B .hi{color:#0369A1}
+.B .card{position:absolute;left:72px;right:72px;bottom:110px;height:360px;background:#FCFEFF;border:2px solid #D4E8F2;border-radius:32px;box-shadow:0 18px 50px rgba(8,48,99,.12);display:flex;overflow:hidden}
+.B .card .p{width:300px;flex:none;background:url(../../maxwell-kingsbury.jpg) 50% 20%/cover}
+.B .card .t{padding:40px 44px;display:flex;flex-direction:column;justify-content:space-between}
+.B .lic{color:#55697F}
+.B .cta{background:#0369A1;color:#FAFDFF;font-size:32px;padding:20px 34px;align-self:flex-start}
+.B .foot{position:absolute;left:72px;right:72px;bottom:34px;display:flex;justify-content:space-between;align-items:flex-end;color:#55697F}
+.B .brand{color:#0B1D33}.B .brand span{color:#0369A1}
+/* C: photo left, text right */
+.C{background:#E1F3FA}
+.C .photo{position:absolute;left:0;top:0;width:470px;height:960px;background:url(../../maxwell-kingsbury.jpg) 50% 15%/cover}
+.C .wrap{position:absolute;left:530px;right:56px;top:72px;bottom:150px;display:flex;flex-direction:column;justify-content:space-between}
+.C .k{color:#0369A1;font-size:20px}
+.C .hi{color:#0369A1}
+.C .lic{color:#55697F}
+.C .cta{background:#083063;color:#FAFDFF;font-size:30px;padding:20px 30px;align-self:flex-start}
+.C .tag{position:absolute;left:0;right:0;bottom:0;height:120px;background:#083063;color:#BFD9EA;padding:22px 56px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.C .brand{color:#FAFDFF}.C .brand span{color:#0EA0E8}
+</style></head><body><div id="r"></div><script>
+const q=new URLSearchParams(location.search),H=q.get('h'),S=q.get('s'),C=q.get('c'),L=q.get('l');
+document.body.className=L;
+const arr=C.startsWith('Call')?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const head=`<div class="h" id="h">${H.replace(/2027/g,'<span class="hi">2027</span>')}</div>`;
+const sub=S?`<div class="sub" style="opacity:.85">${S}</div>`:'';
+const cta=`<span class="cta">${C}${arr}</span>`;
+const who=`<div><div class="name">Max Kingsbury</div><div class="lic">Licensed Insurance Agent · Clearwater, FL<br>FL License G365332 · NPN 22312975</div></div>`;
+const disc=`<div class="disc">Not connected with or endorsed by the U.S. government<br>or the federal Medicare program.</div>`;
+const brand=`<div class="brand">Maxwell<span>Helps</span></div>`;
+let x='';
+if(L==='A')x=`<div class="photo"></div><div class="wrap"><div><span class="k">2027 Medicare review</span></div><div style="display:flex;flex-direction:column;gap:26px">${head}${sub}</div><div style="display:flex;flex-direction:column;gap:30px">${who}<div>${cta}</div></div></div><div class="tag">${disc}${brand}</div>`;
+if(L==='B')x=`<div class="wrap"><div style="margin-bottom:30px"><span class="k">2027 Medicare review</span></div><div style="display:flex;flex-direction:column;gap:22px">${head}${sub}</div></div><div class="card"><div class="p"></div><div class="t">${who}${cta}</div></div><div class="foot">${disc}${brand}</div>`;
+if(L==='C')x=`<div class="photo"></div><div class="wrap"><div><span class="k">2027 Medicare review</span></div><div style="display:flex;flex-direction:column;gap:22px">${head}${sub}</div><div style="display:flex;flex-direction:column;gap:26px">${who}${cta}</div></div><div class="tag">${disc}${brand}</div>`;
+document.getElementById('r').innerHTML=x;
+const h=document.getElementById('h');const max={A:340,B:300,C:380}[L];let fs={A:80,B:84,C:76}[L];h.style.fontSize=fs+'px';
+while(h.scrollHeight>max&&fs>48){fs-=2;h.style.fontSize=fs+'px';}document.body.dataset.fs=fs;
+</script></body></html>
