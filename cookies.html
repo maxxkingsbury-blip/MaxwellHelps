@@ -5,9 +5,31 @@
 <script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cookie Policy | Maxwell Helps</title>
-<meta name="description" content="Maxwell Helps cookie policy: this site does not use cookies.">
+<meta name="description" content="Maxwell Helps cookie policy: the only cookies come from the Meta Pixel used to measure our ads.">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('set', 'autoConfig', false, '2256759738577487');
+fbq('init', '2256759738577487');
+fbq('track', 'PageView');
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="healthsherpa.com/intake"]');
+  if (a) fbq('track', 'Lead', {content_name: 'Start intake form'});
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=2256759738577487&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body><a class="skip" href="#main">Skip to main content</a><svg width="0" height="0" style="position:absolute"><symbol id="palm" viewBox="0 0 200 300"><g fill="currentColor"><path d="M96 68C104 150 96 230 104 300L116 300C108 230 116 150 106 68Z"/><path d="M100 70C70 30 25 30 0 62C35 48 68 55 100 70Z"/><path d="M100 70C130 30 175 30 200 62C165 48 132 55 100 70Z"/><path d="M100 70C60 60 20 85 8 130C40 96 70 82 100 70Z"/><path d="M100 70C140 60 180 85 192 130C160 96 130 82 100 70Z"/><path d="M100 70C85 30 95 10 108 0C112 30 108 50 100 70Z"/><path d="M100 70C80 55 55 45 40 20C70 30 90 50 100 70Z"/><path d="M100 70C120 55 145 45 160 20C130 30 110 50 100 70Z"/></g></symbol></svg>
 <div class="banner">Medicare Annual Enrollment runs Oct 15 to Dec 7 · <a href="index.html#contact">Get local help</a></div>
@@ -23,24 +45,25 @@
 <div class="wrap"><div>
   <span class="eyebrow">Cookies</span>
   <h1>Cookie Policy</h1>
-  <p class="lead">This website does not use cookies or tracking. Here are the details.</p>
-  <p class="updated">Effective September 28, 2026</p>
+  <p class="lead">This website uses one tracking tool, the Meta Pixel, to measure our ads. Here are the details.</p>
+  <p class="updated">Effective October 5, 2026</p>
 </div></div><svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C240 90 480 0 720 40S1200 80 1440 30V80H0Z"/></svg></section>
 
 <section class="legal-body"><div class="wrap legal">
 <h2>Does this site use cookies?</h2>
-<p>No. This website does not set any cookies and does not store anything in your browser's local storage. It has no analytics, advertising pixels, chat widgets, social media plugins or embedded videos.</p>
+<p>Only one kind. The Meta Pixel sets Meta cookies (such as <code>_fbp</code>) so we can see which of our Facebook and Instagram ads bring visitors to this site and how many people click &ldquo;Start intake form.&rdquo; We do not send Meta your plan-fit answers or anything you type into the intake form. The site has no other analytics, chat widgets, social media plugins or embedded videos.</p>
 <h2>Do I need to accept anything?</h2>
-<p>No. Because the site uses no cookies and no tracking, there is nothing to accept, so no cookie banner is shown.</p>
+<p>No banner is shown. You can limit how Meta uses this information in your <a href="https://www.facebook.com/adpreferences/ad_settings" target="_blank" rel="noopener">Facebook ad preferences</a>, block third-party cookies in your browser, or use a browser extension that blocks trackers. The site works the same either way.</p>
 <h2>Third-party requests</h2>
 <ul>
 <li><strong>Google Fonts:</strong> fonts are loaded from Google's servers, which receive your IP address and browser details to deliver them. Google states that the Fonts service does not set cookies.</li>
+<li><strong>Meta Pixel:</strong> your browser loads Meta&rsquo;s script from connect.facebook.net and sends page visits and intake-button clicks to Meta, which receives your IP address and browser details. Meta&rsquo;s privacy policy applies.</li>
 <li><strong>GitHub Pages:</strong> our hosting provider may log IP addresses for security.</li>
 </ul>
 <h2>Sites we link to</h2>
 <p>The intake form opens on HealthSherpa's website, and we link to sites such as Medicare.gov. Those sites may use their own cookies under their own policies.</p>
 <h2>Changes</h2>
-<p>If we ever add cookies or analytics, we will update this policy first and ask for your consent where the law requires it.</p>
+<p>If we add other cookies or analytics, we will update this policy first and ask for your consent where the law requires it.</p>
 <p>See also our <a href="privacy.html">Privacy Policy</a>.</p>
 <div class="box"><strong>Contact</strong><br>Maxwell Kingsbury · Maxwell Helps<br>Phone: <a href="tel:+17273513321">727-351-3321</a> · Email: <a href="mailto:Max@MaxwellHelps.com">Max@MaxwellHelps.com</a><br>Hours: 10am-8pm Eastern</div>
 </div></section>
