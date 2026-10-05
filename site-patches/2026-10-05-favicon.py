@@ -1,6 +1,7 @@
 """Site patch 2026-10-05: add favicon links (favicon.ico, favicon.svg, apple-touch-icon.png)
 to every page. The icon files live in the repo root.
-Idempotent: safe to run more than once."""
+Idempotent: safe to run more than once.
+(Re-pushed to retry after a GitHub runner outage on the first attempt.)"""
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
