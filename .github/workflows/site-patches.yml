@@ -1,0 +1,47 @@
+name: Apply site patches
+
+# Runs the small, idempotent Python edit scripts in site-patches/ and commits the result.
+# Lets website edits be made by pushing a short script instead of whole HTML files.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site-patches/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-patches
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply patches in order
+        run: |
+          for f in $(ls site-patches/*.py | sort); do
+            echo "Running $f"
+            python "$f"
+          done
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A -- . ':!site-patches'
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Apply site patches"
+            git push
+          fi
